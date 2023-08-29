@@ -1,6 +1,7 @@
 class BlogPost < ApplicationRecord
+  has_rich_text :content
   validates :title, presence: true
-  validates :body, presence: true
+  validates :content, presence: true
   # USing Lamdas below to make sure that Time current is current on each request
   scope :sorted, -> { order(arel_table[:published_at].desc.nulls_last).order(updated_at: :desc)}
   scope :draft, -> { where(published_at: nil) }
