@@ -1,0 +1,6 @@
+<h1>Home Page</h1>
+
+<% @blog_posts.each do |post| %>
+  <h3><%= link_to post.title, post%></h3>
+  <p><%= post.body %></p>
+<% end %>

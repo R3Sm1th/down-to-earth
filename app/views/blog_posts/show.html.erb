@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  <%#= link_to "Profile", edit_user_registration_path %>
+  <%= link_to "Edit Post", edit_blog_post_path(@blog_post) %>
+<% end %>
+<h3><%= @blog_post.title %></h3>
+<p><%= @blog_post.body %></p>
