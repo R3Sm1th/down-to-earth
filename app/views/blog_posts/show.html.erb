@@ -1,6 +1,12 @@
 <% if user_signed_in? %>
   <%#= link_to "Profile", edit_user_registration_path %>
   <%= link_to "Edit Post", edit_blog_post_path(@blog_post) %>
+    <%= link_to "Delete Post",
+    blog_post_path(@blog_post),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete?"}
+  %>
 <% end %>
-<h3><%= @blog_post.title %></h3>
-<p><%= @blog_post.content %></p>
+<section class="prose">
+  <h3><%= @blog_post.title %></h3>
+  <p><%= @blog_post.content %></p>
+</section>

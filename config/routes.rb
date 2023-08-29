@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   # post "blog_posts", to: "blog_posts#create", as: :blog_posts
 
   # Defines the root path route ("/")
-  root "blog_posts#index"
+  root "pages#home"
 end
