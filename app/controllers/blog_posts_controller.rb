@@ -5,6 +5,8 @@ before_action :authenticate_user!, except: [:index, :show, :create]
 def index
   @blog_posts = user_signed_in? ? BlogPost.sorted : BlogPost.published.sorted
   @pagy, @blog_posts = pagy(@blog_posts)
+rescue Pagy::OverflowError
+  redirect_to blog_posts_path(page:1 )
 end
 
 def show
@@ -44,8 +46,9 @@ end
 private
 
 def blog_post_params
-  params.require(:blog_post).permit(:title, :content, :published_at)
+  params.require(:blog_post).permit(:title, :content, :published_at, :cover_image)
 end
+
 def set_blog_post
   if user_signed_in?
     @blog_post = BlogPost.find(params[:id])

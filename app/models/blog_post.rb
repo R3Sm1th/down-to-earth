@@ -1,5 +1,6 @@
 class BlogPost < ApplicationRecord
   has_rich_text :content
+  has_one_attached :cover_image
   validates :title, presence: true
   validates :content, presence: true
   # USing Lamdas below to make sure that Time current is current on each request
