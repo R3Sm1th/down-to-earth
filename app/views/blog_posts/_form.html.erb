@@ -28,5 +28,9 @@
     <%= form.label :published_at %>
     <%= form.datetime_select :published_at, include_blank: true %>
   </div>
+  <div>
+    <%= form.label :tags %>
+    <%= form.text_field :tags %>
+  </div>
   <%= form.button %>
 <% end %>

@@ -46,7 +46,7 @@ end
 private
 
 def blog_post_params
-  params.require(:blog_post).permit(:title, :content, :published_at, :cover_image)
+  params.require(:blog_post).permit(:title, :content, :published_at, :cover_image, :tag)
 end
 
 def set_blog_post

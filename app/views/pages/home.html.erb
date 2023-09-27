@@ -1,5 +1,5 @@
-<div class="bg-white-50">
-    <header class="py-4 md:py-6">
+<%# <div class="bg-white-50"> %>
+    <%# <header class="py-4 md:py-6">
         <div class="container px-4 mx-auto sm:px-6 lg:px-8">
             <div class="flex items-center justify-between">
                 <div class="flex-shrink-0">
@@ -18,21 +18,21 @@
 
                 <div class="hidden lg:flex lg:ml-10 xl:ml-16 lg:items-center lg:justify-center lg:space-x-8 xl:space-x-16">
                     <%# <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Home </a> %>
-                    <%= link_to "Our Blog", blog_posts_path, class:"text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2" %>
-                </div>
+                    <%# <%= link_to "Our Blog", blog_posts_path, class:"text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2" %>
+                <%# </div>
             </div>
         </div>
-    </header>
+    </header> %>
 
     <section class="pt-12 pb-12 sm:pb-16 lg:pt-8">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-5">
             <div class="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-12 lg:gap-x-16">
                 <div>
                     <div class="text-center lg:text-left">
                         <h1 class="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-6xl font-pj">Down to Earth</h1>
                         <p class="mt-2 mb-5 text-lg text-gray-600 sm:mt-8 font-inter">Brighton & Hove's Health Food Shop</p>
-
-                        <%# <form action="#" method="POST" class="mt-8 sm:mt-10">
+<%#
+                        <form action="#" method="POST" class="mt-8 sm:mt-10">
                             <div class="relative p-2 sm:border sm:border-gray-400 group sm:rounded-xl sm:focus-within:ring-1 sm:focus-within:ring-gray-900 sm:focus-within:border-gray-900">
                                 <input
                                     type="email"
@@ -47,6 +47,11 @@
                                 </div>
                             </div>
                         </form> %>
+                        <%= link_to blog_posts_path do %>
+                          <button type="button" class="inline-flex px-6 py-3 text-lg font-bold text-white transition-all duration-200 bg-gray-900 rounded-lg focus:outline-none focus:bg-gray-600 font-pj hover:bg-gray-600">
+                          See Latest News
+                          </button>
+                        <% end %>
                     </div>
 
                     <div class="flex items-center justify-center mt-10 space-x-6 lg:justify-start sm:space-x-8">
@@ -73,7 +78,7 @@
                 </div>
 
                 <div>
-                    <img class="w-full rounded-full shadow" src="https://wanderingsoflight.net/wp-content/uploads/2015/06/down-to-earth_2.jpg" alt="homepage" />
+                    <img class="w-full rounded-full shadow-lg" src="https://wanderingsoflight.net/wp-content/uploads/2015/06/down-to-earth_2.jpg" alt="homepage" />
                 </div>
             </div>
         </div>
@@ -102,7 +107,7 @@
                             <path d="M37 1H5C2.79086 1 1 2.79086 1 5V37C1 39.2091 2.79086 41 5 41H37C39.2091 41 41 39.2091 41 37V5C41 2.79086 39.2091 1 37 1Z" stroke="#161616" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Organic</h3>
-                        <p class="mt-5 text-base text-gray-600 font-pj"><span class="bold">Request Received</span> <br>  short descriptions</p>
+                        <p class="mt-5 text-base text-gray-600 font-pj">We made our name selecting only farmers with best practices</p>
                     </div>
 
                     <div class="md:p-8 lg:p-14 md:border-t md:border-gray-200">
@@ -117,7 +122,7 @@
                             <path d="M37 1H5C2.79086 1 1 2.79086 1 5V37C1 39.2091 2.79086 41 5 41H37C39.2091 41 41 39.2091 41 37V5C41 2.79086 39.2091 1 37 1Z" stroke="#161616" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Natural</h3>
-                        <p class="mt-5 text-base text-gray-600 font-pj"><span class="bold">Processing Request</span> <br>  short descriptions </p>
+                        <p class="mt-5 text-base text-gray-600 font-pj">Product FSC, MSC and Rainforest Alliance Certified</p>
                     </div>
                     <div class="md:p-8 lg:p-14 md:border-t md:border-gray-200">
                         <svg class="mx-auto" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,7 +136,7 @@
                             <path d="M37 1H5C2.79086 1 1 2.79086 1 5V37C1 39.2091 2.79086 41 5 41H37C39.2091 41 41 39.2091 41 37V5C41 2.79086 39.2091 1 37 1Z" stroke="#161616" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Ethical</h3>
-                        <p class="mt-5 text-base text-gray-600 font-pj"><span class="bold">Preparing Response</span> <br>  short descriptions </p>
+                        <p class="mt-5 text-base text-gray-600 font-pj">We ask the questions, so you can shop peacefully</p>
                     </div>
 
                     <div class="md:p-8 lg:p-14 md:border-t md:border-gray-200">
@@ -147,7 +152,7 @@
                         </svg>
                         <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Trusted</h3>
 
-                        <p class="mt-5 text-base text-gray-600 font-pj"> <span class="bold">Response Sent</span> <br> short descriptions</p>
+                        <p class="mt-5 text-base text-gray-600 font-pj">All the brands you expect and then only the best</p>
                     </div>
 
 
@@ -220,7 +225,7 @@
             </div>
           </section>
 
-    <!-- meet the team -->
+    <!-- Meet the team -->
     <section class="py-12 bg-white sm:py-16 lg:py-20">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="text-center">
@@ -229,28 +234,29 @@
 
             <div class="grid max-w-6xl grid-cols-1 px-20 mx-auto mt-12 text-center sm:px-0 sm:grid-cols-2 md:mt-20 gap-x-8 md:grid-cols-4 gap-y-12 lg:gap-x-16 xl:gap-x-20">
                 <div>
-                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-1.png" alt="" />
-                    <p class="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">Jerome Bell</p>
-                    <p class="mt-2 text-base font-normal text-gray-600 font-pj">Co founder, Chairman, Executive Director</p>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="https://res.cloudinary.com/dcu7y5wnn/image/upload/v1695804474/alexander-hipp-iEEBWgY_6lA-unsplash_dckm60.jpg" alt="" />
+                    <p class="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">Robert Green</p>
+                    <p class="mt-2 text-base font-normal text-gray-600 font-pj">Green Product Specialist</p>
                 </div>
 
                 <div>
-                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-2.png" alt="" />
-                    <p class="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">Jerome Bell</p>
-                    <p class="mt-2 text-base font-normal text-gray-600 font-pj">Co founder, Chairman, Executive Director</p>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="https://res.cloudinary.com/dcu7y5wnn/image/upload/v1695804471/jason-moyer-A73ah5JKtVA-unsplash_ubecmf.jpg" alt="" />
+                    <p class="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">Ellie Dazz</p>
+                    <p class="mt-2 text-base font-normal text-gray-600 font-pj">Dazz the Distributer</p>
                 </div>
 
                 <div>
-                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-3.png" alt="" />
-                    <p class="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">Jerome Bell</p>
-                    <p class="mt-2 text-base font-normal text-gray-600 font-pj">Co founder, Chairman, Executive Director</p>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="https://res.cloudinary.com/dcu7y5wnn/image/upload/v1695804473/jurica-koletic-7YVZYZeITc8-unsplash_qvkbbq.jpg" alt="" />
+                    <p class="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">Simon Sellers</p>
+                    <p class="mt-2 text-base font-normal text-gray-600 font-pj">Founder That Also Sells</p>
                 </div>
 
                 <div>
-                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-4.png" alt="" />
-                    <p class="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">Jerome Bell</p>
-                    <p class="mt-2 text-base font-normal text-gray-600 font-pj">Co founder, Chairman, Executive Director</p>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="https://res.cloudinary.com/dcu7y5wnn/image/upload/v1695804472/alex-starnes-WYE2UhXsU1Y-unsplash_eikngg.jpg" alt="" />
+                    <p class="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">Jamie Procter</p>
+                    <p class="mt-2 text-base font-normal text-gray-600 font-pj">Chief Product Tester</p>
                 </div>
+
             </div>
 
 
